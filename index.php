@@ -21,7 +21,9 @@
 
     <title>Listar Imovéis</title>
 </head>
-<div class="banner"></div>
+<div class="banner">
+  <img class="bannerimg" src="images/1.png">
+</div>
 <body>
     <?php
 foreach($lstDog as $adocao){

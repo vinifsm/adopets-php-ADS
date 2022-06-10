@@ -1,0 +1,14 @@
+.banner{
+    margin-bottom: 100px;
+}
+.bannerimg{
+    margin-top: 50px;
+    margin-left: 5%;
+    width: 1200px;
+    height: 200px;
+}
+.blocks{
+    width: 300px;
+    display: inline-block;
+    margin-left: 100px;
+}
