@@ -12,9 +12,25 @@
     display: inline-block;
     margin-left: 100px;
 }
+.card{
+    height: 300px;
+}
 .space {
     margin-left: 50px;
 }
 .space1{
     margin-right: 50px;
+}
+.imgcard{
+    height: 200px;
+    width: 200px;
+}
+.bigcontainer{
+    padding-top: auto;
+}
+.parallax-container{
+    height: auto;
+}
+.size{
+    display:inline !important ;
 }
