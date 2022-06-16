@@ -10,13 +10,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Sistema Imobiliário</title>
+    <title>Adocao de Pets</title>
 </head>
 
 <body>
     <nav>
         <div class="nav-wrapper teal darken-2">
-            <a href="index.php" class="brand-logo center"><img src="images\R.jpeg" width="80"></a>
+            <a href="index.php" class="brand-logo center"><img src="images\icon.jpeg" width="150"></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down space">
                 <li><a href="lstAdocao.php">Quero Adotar</a></li>
                 <li><a href="frmDivulgar.php">Quero Divulgar</a></li>
