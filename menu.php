@@ -16,7 +16,7 @@
 <body>
     <nav>
         <div class="nav-wrapper teal darken-2">
-            <a href="index.php" class="brand-logo center"><img src="images\icon.jpeg" width="150"></a>
+            <a href="index.php" class="brand-logo center"><img src="images\icon.jpeg" width="170"></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down space">
                 <li><a href="lstAdocao.php">Quero Adotar</a></li>
                 <li><a href="frmDivulgar.php">Quero Divulgar</a></li>
