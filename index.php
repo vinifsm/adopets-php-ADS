@@ -22,7 +22,7 @@ $lstDog = $pdo->query($sql);
   <title>Listar Imovéis</title>
 </head>
 <div class="banner">
-  <img class="bannerimg" src="images/1.jpeg">
+  <img class="bannerimg" src="images/banner.jpeg">
 </div>
 
 <body>
