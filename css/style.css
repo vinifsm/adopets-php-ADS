@@ -1,36 +1,45 @@
-.banner{
+.banner {
     margin-bottom: 100px;
 }
-.bannerimg{
+
+.bannerimg {
     margin-top: 50px;
     margin-left: 5%;
     width: 1200px;
     height: 200px;
 }
-.blocks{
+
+.blocks {
     width: 300px;
     display: inline-block;
     margin-left: 100px;
 }
-.card{
+
+.card {
     height: 300px;
 }
+
 .space {
     margin-left: 50px;
 }
-.space1{
+
+.space1 {
     margin-right: 50px;
 }
-.imgcard{
+
+.imgcard {
     height: 200px;
     width: 200px;
 }
-.bigcontainer{
+
+.bigcontainer {
     padding-top: auto;
 }
-.parallax-container{
+
+.parallax-container {
     height: auto;
 }
-.size{
-    display:inline !important ;
+
+.size {
+    display: inline !important;
 }
