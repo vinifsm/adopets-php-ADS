@@ -36,13 +36,13 @@ $id = $_GET['id'];
                         <h4 class="truncate bg-card-user">
                             <img src="./images/icon.jpeg" width="150" class="circle responsive-img">
                             <div class="row login">
-                                <h4>Deseja mesmo remover o pet?</h4>                            
-                                <form action="remPet.php" id="frmInsUser" class="col s12">
+                                <h4>Deseja mesmo cancelar a adoção?</h4>                            
+                                <form action="remAdocao.php" id="frmInsUser" class="col s12">
                                     <div class="row">
-                                        <button class="btn waves-effect waves-light red darken-3" type="button" id="btnExcluir" onclick="JavaScript:location.href='remPet.php?id=<?php echo $id?>'">
-                                            Excluir
+                                        <button class="btn waves-effect waves-light red darken-3" type="button" id="btnExcluir" onclick="JavaScript:location.href='remAdocao.php?id=<?php echo $id?>'">
+                                            Cancelar
                                         </button>
-                                        <button class="btn waves-effect waves-light teal darken-3" type="button" id="btnVoltar" onclick="JavaScript:location.href='lstDivulgados.php'">
+                                        <button class="btn waves-effect waves-light teal darken-3" type="button" id="btnVoltar" onclick="JavaScript:location.href='lstAdotados.php'">
                                             Voltar
                                         </button>
                                     </div>

@@ -8,7 +8,7 @@ $id = $_SESSION['id'];
 
 include 'conexao.php';
 $pdo = Conexao::conectar();
-$sql  = "select * from pet inner join usuario on pet.protetor = usuario.id 
+$sql  = "select pet.id, pet.nome, pet.idade, pet.sexo, raca.raca, pet.porte, animal.tipoanimal, pet.descricao, pet.adotador, pet.imagem, usuario.login, usuario.username, usuario.telefone from pet inner join usuario on pet.protetor = usuario.id 
 inner join animal on pet.animal = animal.id 
 inner join raca on pet.raca = raca.id 
 where adotador =";
@@ -56,6 +56,9 @@ $lstDog = $pdo->query($sql.$id.$sql1);
                 <span>Protetor: <?php echo $adocao['username'] ?></span><br>
                 <span>E-mail: <?php echo $adocao['login'] ?></span><br>
                 <span>Telefone: <?php echo $adocao['telefone'] ?></span></h5>
+                                        <button class="btn waves-effect waves-light teal darken-3" type="button" id="btnExcluir" onclick="JavaScript:location.href='frmRemAdocao.php?id=<?php echo $adocao['id']?>'">
+                                            Cancelar
+                                        </button>                                  
                     </div>
           <div class="card-reveal">
           <h5 class="descri"><span class="card-title black-text text-darken-4"><b>Informações</b><i class="material-icons right">close</i></span>
