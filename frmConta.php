@@ -28,6 +28,8 @@ $frmConta = $pdo->query($sql);
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
 
     <title>Inserir Dados de Imóvel</title>
 </head>
@@ -53,15 +55,15 @@ $frmConta = $pdo->query($sql);
                                 <div class="row">
                                     <div class="input-field col m12 s12">
                                         <i class="material-icons iconis prefix">account_box</i>
-                                        <input id="lblNome" type="text" name="txtUsername" class="validate" value="<?php echo $_SESSION['username'] ?>">
-                                        <label for="lblNome">Nome</label>
+                                        <input id="lblNome" type="text" name="txtUsername" class="validate" value="<?php echo $_SESSION['username'] ?>" required="true">
+                                        <label for="lblNome">Nome &nbsp;<label for="lblNome" generated="true" class="error red-text"></label></label>
                                     </div>
                                 </div>
                                     <div class="row">
                                         <div class="input-field col m12 s12">
                                             <i class="material-icons iconis prefix">local_phone</i>
-                                            <label for="lblTelefone">Telefone</label>
-                                            <input id="lblTelefone" name="txtTelefone" type="text"  value="<?php echo $_SESSION['telefone'] ?>">
+                                            <label for="lblTelefone">Telefone &nbsp;<label for="lblTelefone" generated="true" class="error red-text"></label></label>
+                                            <input id="lblTelefone" name="txtTelefone" type="text"  value="<?php echo $_SESSION['telefone'] ?>" required="true" digits="true" rangelength="[10,11]">
                                         </div>
                                     </div>   
                                     <div class="row">
@@ -83,6 +85,7 @@ $frmConta = $pdo->query($sql);
         </div>
     </div>
     </div>
+    <script src="validacao.js"></script>
 </body>
 
 </html>

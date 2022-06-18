@@ -24,6 +24,8 @@ $lstDog = $pdo->query($sql . $id);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
 
   <title>Listar Imovéis</title>
 </head>
@@ -52,22 +54,22 @@ $lstDog = $pdo->query($sql . $id);
                       <div class="input-field col m12 s12">
                         <i class="material-icons iconis prefix">toc</i>
                         <input id="lblId" type="hidden" name="txtId" class="hidden" value="<?php echo $adocao['id'] ?>">
-                        <input id="lblNome" type="text" name="txtNome" class="validate" value="<?php echo $adocao['nome'] ?>">
-                        <label for="lblNome">Nome</label>
+                        <input id="lblNome" type="text" name="txtNome" class="validate" value="<?php echo $adocao['nome'] ?>" required="true">
+                        <label for="lblNome">Nome &nbsp;<label for="lblNome" generated="true" class="error red-text"></label></label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col m12 s12">
                         <i class="material-icons iconis prefix">toc</i>
-                        <label for="lblIdade">Idade</label>
-                        <input id="lblIdade" name="txtIdade" type="text" value="<?php echo $adocao['idade'] ?>">
+                        <label for="lblIdade">Idade &nbsp;<label for="lblIdade" generated="true" class="error red-text"></label></label>
+                        <input id="lblIdade" name="txtIdade" type="text" value="<?php echo $adocao['idade'] ?>" required="true" digits="true">
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col m12 s12">
                         <i class="material-icons iconis prefix">toc</i>
-                        <label for="lblDesc">Descrição</label>
-                        <input id="lblDesc" name="txtDesc" type="text" value="<?php echo $adocao['descricao'] ?>">
+                        <label for="lblDesc">Descrição &nbsp;<label for="lblDesc" generated="true" class="error red-text"></label></label>
+                        <input id="lblDesc" name="txtDesc" type="text" value="<?php echo $adocao['descricao'] ?>" required="true">
                       </div>
                     </div>
                     <div class="row">
@@ -84,6 +86,7 @@ $lstDog = $pdo->query($sql . $id);
     </div>
   </div>
             </div>
+            <script src="validacao.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,9 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 
     <title>Inserir Dados de Imóvel</title>
@@ -37,29 +39,31 @@
                                 <div class="row">
                                     <div class="input-field col m12 s12">
                                         <i class="material-icons iconis prefix">account_box</i>
-                                        <input id="lblNome" type="text" name="txtUsername" class="validate">
-                                        <label for="lblNome">Nome</label>
+                                        <input id="lblNome" type="text" name="txtUsername" class="validate" required>
+                                        <label for="lblNome">Nome &nbsp;<label for="lblNome" generated="true" class="error red-text"></label></label>
+
                                     </div>
+
                                 </div>
                                     <div class="row">
                                         <div class="input-field col m12 s12">
                                             <i class="material-icons iconis prefix">mail</i>
-                                            <label for="lblEmail">E-mail</label>
-                                            <input id="lblEmail" name="txtLogin" type="text">
+                                            <label for="lblEmail">E-mail &nbsp;<label for="lblEmail" generated="true" class="error red-text"></label></label>
+                                            <input id="lblEmail" name="txtLogin" type="email" required="true" email="true">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col m12 s12">
                                             <i class="material-icons iconis prefix">local_phone</i>
-                                            <label for="lblTelefone">Telefone</label>
-                                            <input id="lblTelefone" name="txtTelefone" type="text">
+                                            <label for="lblTelefone">Telefone &nbsp;<label for="lblTelefone" generated="true" class="error red-text"></label></label>
+                                            <input id="lblTelefone" name="txtTelefone" type="text" required="true" digits="true" rangelength="[10,11]">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col m12 s12">
                                             <i class="material-icons iconis prefix">lock</i>
-                                            <label for="lblSenha">Senha</label>
-                                            <input id="lblSenha" name="txtPassword" type="text">
+                                            <label for="lblSenha">Senha &nbsp;<label for="lblSenha" generated="true" class="error red-text"></label></label>
+                                            <input id="lblSenha" name="txtPassword" type="text" required="true" rangelength="[4,12]">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -79,6 +83,7 @@
         </div>
     </div>
     </div>
+    <script src="validacao.js"></script>
 </body>
 
 </html>

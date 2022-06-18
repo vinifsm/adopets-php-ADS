@@ -24,9 +24,8 @@ $lstRaca = $pdo->query($sql);
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"> </script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
   <title>Inserir Locação</title>
 </head>
 
@@ -44,15 +43,15 @@ $lstRaca = $pdo->query($sql);
                   <div class="row">
                     <div class="input-field col m12 s12">
                       <i class="material-icons iconis prefix">toc</i>
-                      <input id="lblNome" type="text" name="txtNome" class="validate">
-                      <label for="lblNome">Nome</label>
+                      <input id="lblNome" type="text" name="txtNome" class="validate" required="true">
+                      <label for="lblNome">Nome &nbsp;<label for="lblNome" generated="true" class="error red-text"></label></label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col m12 s12">
                       <i class="material-icons iconis prefix">toc</i>
-                      <label for="lblIdade">Idade</label>
-                      <input id="lblIdade" name="txtIdade" type="text">
+                      <label for="lblIdade">Idade &nbsp;<label for="lblIdade" generated="true" class="error red-text"></label></label>
+                      <input id="lblIdade" name="txtIdade" type="text" required="true" digits="true">
                     </div>
                   </div>
 
@@ -60,7 +59,7 @@ $lstRaca = $pdo->query($sql);
                   <div class="row">
                     <label for="lblAnimal" class="black-text bold">Escolha o Animal:</label>
 
-                    <div class="input-field col s12">
+                    <div class="input-field col s12" required="true">
                       <select name="slcAnimal" id="slcAnimal">
                         <option value="" disabled selected>Escolha uma opção</option>
                         <?php
@@ -104,8 +103,8 @@ $lstRaca = $pdo->query($sql);
                   <div class="row">
                     <div class="input-field col m12 s12">
                       <i class="material-icons iconis prefix">toc</i>
-                      <label for="lblDesc">Descrição</label>
-                      <input id="lblDesc" name="txtDesc" type="text">
+                      <label for="lblDesc">Descrição &nbsp;<label for="lblDesc" generated="true" class="error red-text"></label></label>
+                      <input id="lblDesc" name="txtDesc" type="text" required="true">
                     </div>
                   </div>
                   <div class="row">
@@ -134,7 +133,7 @@ $lstRaca = $pdo->query($sql);
     </div>
   </div>
 </body>
-
+<script src="validacao.js"></script>
 </html>
 
 <script>

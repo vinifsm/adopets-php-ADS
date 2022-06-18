@@ -3,12 +3,6 @@
   if (isset($_SESSION['login']))
       Header("Location: index.php"); 
 ?>
-<link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet"
-    id="bootstrap-css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,10 +17,15 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  -->
     <title>Sistema Imobiliária</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
-    <!-- My CSS -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -42,19 +41,19 @@
                         <div class="row login">
                             <h4>Login</h4>
                             <br>
-                            <form method="post" action="login.php" class="col s12">
+                            <form method="post" action="login.php"  id="frmInsUser" class="col s12">
                                 <div class="row">
                                     <div class="input-field col m12 s12">
                                         <i class="material-icons iconis prefix">mail</i>
-                                        <input id="icon_prefix" type="text" name="user" class="validate">
-                                        <label for="icon_prefix">E-mail</label>
+                                        <input id="lblUser" type="text" name="user" class="validate" required="true">
+                                        <label for="icon_prefix">E-mail &nbsp;<label for="lblUser" generated="true" class="error red-text"></label></label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col m12 s12">
                                         <i class="material-icons iconis prefix">lock</i>
-                                        <input id="password" type="password" name="password" class="validate">
-                                        <label for="password">Senha</label>
+                                        <input id="lblPassword" type="password" name="password" class="validate" required="true">
+                                        <label for="lblPassword">Senha &nbsp;<label for="lblPassword" generated="true" class="error red-text"></label></label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -70,11 +69,7 @@
     </div>
     </div>
     </footer>
-
-    <!-- jQuery first, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="mySpxript.js"></script>
+    <script src="validacao.js"></script>
 </body>
 
 </html>
