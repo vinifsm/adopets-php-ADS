@@ -2,9 +2,16 @@
 include 'menu.php';
 include 'conexao.php';
 $pdo = Conexao::conectar();
-$sql  = "select * from pet order by nome limit 5";
+$sql  = "select * from pet where estado = 'L' and protetor != ";
+if (!isset($_SESSION['login'])) {
+  $id = 0;
+} else{
+  $id = $_SESSION['id']; 
+}
 
-$lstDog = $pdo->query($sql);
+$sql1 = " order by nome limit 5";
+
+$lstDog = $pdo->query($sql.$id.$sql1);
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +43,12 @@ $lstDog = $pdo->query($sql);
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4"><?php echo $adocao['nome'] ?><i class="material-icons right">more_vert</i></span>
-            <p><a href="#">Adotar</a></p>
+            <form class="center" id="formulario" name="formulario" method="get" action="frmAdocao.php">
+            <input id="id" name="id" type="hidden" value="<?php echo $adocao['id'] ?>" />
+            <button class="btn waves-effect waves-light teal darken-1" type="submit" id="btnVoltar" onclick="JavaScript:location.href='index.php'">
+              Adotar
+            </button>
+          </form>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">Descrição<i class="material-icons right">close</i></span>
@@ -48,7 +60,7 @@ $lstDog = $pdo->query($sql);
     }
   ?>
   <div class="blocks center">
-  <button class="btn waves-effect waves-light teal darken-3" type="button" id="btnVoltar" onclick="JavaScript:location.href='lstImovel.php'">
+  <button class="btn waves-effect waves-light teal darken-3" type="button" id="btnVoltar" onclick="JavaScript:location.href='lstAdocao.php'">
     Ver Mais ...
   </button>
   </div>

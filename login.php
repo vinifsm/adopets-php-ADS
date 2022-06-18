@@ -15,7 +15,11 @@
    if (md5($pwd)==$dados['password']){
       session_start();
       $_SESSION['login'] = $dados['login'];
-      $_SESSION['pwd'] = $dados['pwd']; 
+      $_SESSION['id'] = $dados['id'];
+      $_SESSION['pwd'] = $dados['password'];
+      $_SESSION['nivel'] = $dados['nivel']; 
+      $_SESSION['username'] = $dados['username']; 
+      $_SESSION['telefone'] = $dados['telefone'];
       header("location:index.php"); 
   }
   else header("location:frmLogin.php"); 

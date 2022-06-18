@@ -1,3 +1,8 @@
+<?php
+  session_start(); 
+  if (isset($_SESSION['login']))
+      Header("Location: index.php"); 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,14 +30,14 @@
                 <div class="row"><br>
                     <div class="col m8 s20 offset-m2 offset-s5 center white">
                         <h4 class="truncate bg-card-user">
-                            <img src="./images/R.png" width="150" class="circle responsive-img">
+                            <img src="./images/icon.jpeg" width="150" class="circle responsive-img">
                             <div class="row login">
                                 <h4>Cadastro</h4>
                                 <form action="insUser.php" method="post" id="frmInsUser" class="col s12">
                                 <div class="row">
                                     <div class="input-field col m12 s12">
                                         <i class="material-icons iconis prefix">account_box</i>
-                                        <input id="lblNome" type="text" name="txtNome" class="validate">
+                                        <input id="lblNome" type="text" name="txtUsername" class="validate">
                                         <label for="lblNome">Nome</label>
                                     </div>
                                 </div>

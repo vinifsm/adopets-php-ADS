@@ -37,7 +37,7 @@
             <div class="row"><br>
                 <div class="col m8 s20 offset-m2 offset-s5 center white">
                     <h4 class="truncate bg-card-user">
-                        <img src="./images/R.png" width="150"
+                        <img src="./images/icon.jpeg" width="150"
                             class="circle responsive-img">
                         <div class="row login">
                             <h4>Login</h4>
