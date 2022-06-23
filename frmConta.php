@@ -4,13 +4,13 @@
        Header("Location: index.php");   
       }
 
-$user = $_SESSION['login'];
+$user = $_SESSION['id'];
       
 include 'conexao.php';
 $pdo = Conexao::conectar();
-$sql  = "select * from usuario where login LIKE ?";
+$sql  = "select * from usuario where id =";
 
-$frmConta = $pdo->query($sql);
+$frmConta = $pdo->query($sql.$user);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

@@ -22,7 +22,7 @@
     <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Inserir Dados de Imóvel</title>
+    <title>Inserir dados</title>
 </head>
 
 <body class="teal">

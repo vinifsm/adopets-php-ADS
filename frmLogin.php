@@ -16,7 +16,7 @@
     <!--      <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/happily-colored-snlogo/128/medium.png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  -->
-    <title>Sistema Imobiliária</title>
+    <title>AdoPet</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 

@@ -15,7 +15,7 @@
           <div class="footer-copyright ">
             <div class="container">
             © 2022 Linguagem de Programação
-            <a class="grey-text text-lighten-4 right" href="http://www.fema.edu.br">Mais informações</a>
+            <a class="grey-text text-lighten-4 right" href="https://youtu.be/GPiW56qtUf0">Mais informações</a>
             </div>
           </div>
         </footer>
